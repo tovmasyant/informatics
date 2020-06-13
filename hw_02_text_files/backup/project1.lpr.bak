@@ -19,26 +19,21 @@ var
   i: integer;
 
 begin
-  write('Enter the number of files: ');           //меняем размер массивов в соотв с колвом файлов
+  write('Enter the number of files: ');
   readln(n_files);
-
   setlength(files, n_files);
   setlength(users, n_files);
-
   program_end := false;
-
   for i := 1 to n_files do
   begin
     writeln('Enter file name ', i, ': ');
     readln(fname);
     assign(files[i - 1], fname);
     reset(files[i - 1]);
-    users[i - 1].isChanged := true;           //если новое число записано в файл
+    users[i - 1].isChanged := true;
   end;
-
   assign(end_file, 'end_file.txt');
   rewrite(end_file);
-
   while true do
   begin
     program_end := true;
@@ -53,7 +48,6 @@ begin
           read(files[i], users[i].enters);
           users[i].isChanged := false;
         end;
-
       if (not users[i].isChanged) then
         program_end := false;
 
@@ -69,7 +63,6 @@ begin
     write(end_file, users[min_enters].time, ' ');
     write(end_file, users[min_enters].id, ' ');
     writeln(end_file, users[min_enters].enters, ' ');
-
     users[min_enters].isChanged := true;
   end;
 

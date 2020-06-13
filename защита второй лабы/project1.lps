@@ -6,11 +6,10 @@
     <BuildModes Active="Default"/>
     <Units Count="1">
       <Unit0>
-        <Filename Value="project2.pas"/>
+        <Filename Value="project1.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="76"/>
-        <CursorPos X="74" Y="86"/>
+        <CursorPos X="55" Y="24"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit0>

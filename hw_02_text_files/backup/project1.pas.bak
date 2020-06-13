@@ -1,0 +1,77 @@
+program project1;
+
+type
+user_data = record
+time: integer;
+id: integer;
+enters: integer;
+isChanged: boolean;
+end;
+
+var
+files: array of textfile;
+fname: string;
+n_files: integer;
+end_file: textfile;
+users: array of user_data;
+program_end: boolean;
+min_enters: integer;
+i: integer;
+
+begin
+write('Enter the number of files: ');
+readln(n_files);
+setlength(files, n_files);
+setlength(users, n_files);
+program_end := false;
+for i := 1 to n_files do
+begin
+writeln('Enter file name ', i, ': ');
+readln(fname);
+assign(files[i - 1], fname);
+reset(files[i - 1]);
+users[i - 1].isChanged := true;
+end;
+assign(end_file, 'end_file.txt');
+rewrite(end_file);
+while true do
+begin
+program_end := true;
+
+for i := 0 to n_files - 1 do
+begin
+if not EOF(files[i]) then
+if users[i].isChanged then
+begin
+read(files[i], users[i].time);
+read(files[i], users[i].id);
+read(files[i], users[i].enters);
+users[i].isChanged := false;
+end;
+if (not users[i].isChanged) then
+program_end := false;
+
+end;
+if program_end then
+break;
+min_enters := 0;
+
+for i := 0 to n_files - 1 do
+if ((not users[i].isChanged) and (users[i].enters < users[min_enters].enters)) then
+min_enters := i;
+
+write(end_file, users[min_enters].time, ' ');
+write(end_file, users[min_enters].id, ' ');
+writeln(end_file, users[min_enters].enters, ' ');
+users[min_enters].isChanged := true;
+end;
+
+for i := 0 to n_files - 1 do
+Close(files[i]);
+Close(end_file);
+
+writeln('Output file is ', 'end_file.txt');
+writeln('DONE!');
+readln();
+end.
+
