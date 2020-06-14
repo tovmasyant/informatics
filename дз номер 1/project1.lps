@@ -4,26 +4,26 @@
     <PathDelim Value="\"/>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="2">
       <Unit0>
         <Filename Value="project1.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="55" Y="24"/>
+        <TopLine Value="7"/>
+        <CursorPos X="45" Y="53"/>
         <UsageCount Value="20"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="..\..\..\..\Desktop\Geometry325.pas"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="10"/>
-      </Unit1>
-      <Unit2>
-        <Filename Value="..\..\..\..\Desktop\geometry.pas"/>
+        <Filename Value="geometry.pas"/>
+        <IsPartOfProject Value="True"/>
         <UnitName Value="Geometry"/>
         <IsVisibleTab Value="True"/>
-        <UsageCount Value="10"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="157"/>
+        <CursorPos X="10" Y="158"/>
+        <UsageCount Value="20"/>
         <Loaded Value="True"/>
-      </Unit2>
+      </Unit1>
     </Units>
     <JumpHistory HistoryIndex="-1"/>
   </ProjectSession>
