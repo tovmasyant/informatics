@@ -4,14 +4,13 @@
     <PathDelim Value="\"/>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="2">
+    <Units Count="3">
       <Unit0>
         <Filename Value="Project1.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="30"/>
-        <CursorPos X="35" Y="49"/>
-        <UsageCount Value="21"/>
+        <CursorPos X="59" Y="34"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -20,6 +19,12 @@
         <TopLine Value="34"/>
         <UsageCount Value="10"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="Project1.lps"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="XML"/>
+      </Unit2>
     </Units>
     <JumpHistory Count="1">
       <Position1>

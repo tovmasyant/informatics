@@ -8,7 +8,7 @@ program Project1;
    SMin : Real;
    end;
  var
-   N, g, J : Integer;
+   N, g, J, W : Integer;
    T : array of TCircle;
    SMin : Real;
    function FindArea(const O : TCircle): Real;
@@ -31,19 +31,20 @@ begin
   ReadLn (SMin);
 
 
-  g := 0;
-  While g < Length(T) do
+ W := 0;
+ for g := 0 to Length (T)-1 do
   begin
-    if (FindArea(T[g])<SMin) then
+    if (FindArea(T[g])>=SMin) then
     begin
-      for J := g to Length(T)-2 do
-        T[J] := T[J+1];
-      g := g-1;
-      SetLength(T, Length(T)-1);
+      T[W] := T[g];
+      W := W+1;
+
 
     end;
-    g := g+1;
+
+
   end;
+ SetLength(T,W);
   for g := 0 to Length(T)-1 do
   begin
     WriteLn(T[g].X:0:6,' ', T[g].Y:0:6,' ', T[g].R:0:6);
