@@ -46,7 +46,7 @@ begin
   end;
   for g := 0 to Length(T)-1 do
   begin
-    WriteLn(T[g].X:0:6,' ', T[g].Y:0:6,' ', T[g].R:0:6);
+    WriteLn(T[g].X,' ', T[g].Y,' ', T[g].R);
   end;
   ReadLn;
 end.
